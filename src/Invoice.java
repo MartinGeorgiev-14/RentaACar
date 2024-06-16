@@ -3,7 +3,6 @@ import helpers.BigDecimalCalculator;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
-import java.util.Date;
 
 public class Invoice {
     private Customer customer;
@@ -25,7 +24,7 @@ public class Invoice {
     private BigDecimal earlyReturnInsuranceCost;
     private BigDecimal total;
 
-    private BigDecimalCalculator bdCalculator;
+    private final BigDecimalCalculator bdCalculator;
 
     public Invoice(Customer customer, LocalDate startDate, LocalDate endDate, LocalDate returnDate,  Vehicle vehicle, BigDecimalCalculator bdCalculator) {
         this.customer = customer;
